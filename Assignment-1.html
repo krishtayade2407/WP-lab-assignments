@@ -18,9 +18,9 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
         }
-        h2 {
+        h2, h3 {
             text-align: center;
         }
         label {
@@ -55,49 +55,50 @@
 </head>
 <body>
     <div class="container">
-        <h2>Registration Form</h2>
+        <h2>Register</h2>
+        <p><h3>Please fill in this form to apply for the Akatsuki Team.</h3></p>
+        <hr>
         <form>
             <label>First Name:</label>
-            <input type="text" name="first_name" required>
+            <input type="text" name="first_name" placeholder="Enter your first name" required>
             
             <label>Last Name:</label>
-            <input type="text" name="last_name" required>
+            <input type="text" name="last_name" placeholder="Enter your last name" required>
             
-            <label>Gender:</label>
-            <select name="gender" required>
-                <option value="">Select</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-            </select>
+            <label>Select Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
             
             <label>Subject of Interest:</label>
-            <input type="text" name="subject" required>
+            <input type="text" name="subject_interest" placeholder="Enter your subject of interest" required>
             
             <label>Languages Known:</label>
-            <input type="text" name="languages" required>
+            <input type="text" name="languages" placeholder="Enter languages known" required>
             
-            <label>Date of Birth:</label>
-            <input type="text" name="dob" placeholder="dd-mm-yyyy" required>
+            <label>Date of Birth (dd-mm-yyyy):</label>
+            <input type="text" name="dob" placeholder="Enter your date of birth" required>
             
             <label>Contact No.:</label>
-            <input type="tel" name="contact" required>
+            <input type="number" name="contact" placeholder="Enter your contact number" required>
             
             <label>Address:</label>
-            <textarea name="address" rows="3" required></textarea>
+            <textarea name="address" placeholder="Enter your address" required></textarea>
             
             <label>Pin Code:</label>
-            <input type="text" name="pincode" required>
+            <input type="text" name="pincode" placeholder="Enter your pin code" required>
             
             <label>State:</label>
-            <input type="text" name="state" required>
+            <input type="text" name="state" placeholder="Enter your state" required>
             
             <label>Country:</label>
-            <input type="text" name="country" required>
+            <input type="text" name="country" placeholder="Enter your country" required>
+            
+            <p>By creating an account you agree to our <a href="https://casereports.bmj.com/content/15/1/e246713">Terms & Privacy</a>.</p>
             
             <div class="buttons">
                 <button type="reset" class="reset-btn">Reset</button>
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn">Register</button>
             </div>
         </form>
     </div>
